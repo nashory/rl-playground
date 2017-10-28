@@ -52,8 +52,8 @@ GAMMA = 0.999
 EPS_START = 0.9
 EPS_END = 0.05
 EPS_DECAY = 200
-CROP_SIZE = 80
-EPS_MAX = 400
+CROP_SIZE = 48
+EPS_MAX = 200
 
 # load simulator.
 simul = simul.Simulator()
@@ -92,18 +92,18 @@ class DQN(nn.Module):
         self.bn2 = nn.BatchNorm2d(32)
         self.conv3 = nn.Conv2d(32, 32, kernel_size=5, stride=2)
         self.bn3 = nn.BatchNorm2d(32)
-        self.conv4 = nn.Conv2d(32, 48, kernel_size=3, stride=1)
-        self.bn4 = nn.BatchNorm2d(48)
-        self.conv5 = nn.Conv2d(48, 64, kernel_size=3, stride=1)
-        self.bn5 = nn.BatchNorm2d(64)
-        self.head = nn.Linear(576, 2)
+        #self.conv4 = nn.Conv2d(32, 48, kernel_size=3, stride=1)
+        #self.bn4 = nn.BatchNorm2d(48)
+        #self.conv5 = nn.Conv2d(48, 64, kernel_size=3, stride=1)
+        #self.bn5 = nn.BatchNorm2d(64)
+        self.head = nn.Linear(288, 2)
 
     def forward(self, x):
         x = F.relu(self.bn1(self.conv1(x)))
         x = F.relu(self.bn2(self.conv2(x)))
         x = F.relu(self.bn3(self.conv3(x)))
-        x = F.relu(self.bn4(self.conv4(x)))
-        x = F.relu(self.bn5(self.conv5(x)))
+        #x = F.relu(self.bn4(self.conv4(x)))
+        #x = F.relu(self.bn5(self.conv5(x)))
         return self.head(x.view(x.size(0), -1))
 
 
@@ -212,8 +212,8 @@ def optimize_model():
     # Optimize the model
     optimizer.zero_grad()
     loss.backward()
-    for param in model.parameters():
-        param.grad.data.clamp_(-1, 1)
+    #for param in model.parameters():
+    #    param.grad.data.clamp_(-1, 1)
     optimizer.step()
 
 

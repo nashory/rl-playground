@@ -287,7 +287,7 @@ class Simulator():
         return ang
 
     def step(self, action):
-        # if action == pos --> apply torque.
+        
         if action == 0:
             self.rotate(ROTATE_OFFSET)
         elif action == 1:
