@@ -96,7 +96,7 @@ Twisted-Core==13.2.0
 Twisted-Web==13.2.0
 unity-lens-photos==1.0
 urlgrabber==3.9.1
-urllib3==1.7.1
+urllib3==1.26.5
 virtualenv==1.11.4
 xdiagnose===3.6.3build2
 xlrd==0.9.2
