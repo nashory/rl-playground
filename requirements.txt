@@ -7,7 +7,7 @@ colorama==0.2.5
 command-not-found==0.3
 cvxopt==1.1.4
 cycler==0.10.0
-dask==0.8.2
+dask==2021.10.0
 debtagshw==0.1
 decorator==4.1.2
 defer==1.0.6
