@@ -5,7 +5,7 @@ cgkit==2.0.0
 chardet==2.0.1
 colorama==0.2.5
 command-not-found==0.3
-cvxopt==1.1.4
+cvxopt==1.2.7
 cycler==0.10.0
 dask==0.8.2
 debtagshw==0.1
