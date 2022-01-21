@@ -21,7 +21,7 @@ h5py==2.2.1
 html5lib==0.999
 httplib2==0.8
 image==1.5.16
-ipython==2.3.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 Jinja2==2.7.2
 joblib==0.7.1
