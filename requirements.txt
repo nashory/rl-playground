@@ -40,7 +40,7 @@ numpy==1.13.3
 oauthlib==0.6.1
 olefile==0.44
 oneconf==0.3.7.14.4.1
-openpyxl==1.7.0
+openpyxl==2.4.2
 PAM==0.4.2
 pandas==0.13.1
 patsy==0.2.1
