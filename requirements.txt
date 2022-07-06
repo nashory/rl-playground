@@ -18,7 +18,7 @@ duplicity==0.6.23
 enum34==1.1.6
 functools32==3.2.3.post2
 h5py==2.2.1
-html5lib==0.999
+html5lib==0.999999999
 httplib2==0.8
 image==1.5.16
 ipython==2.3.0
